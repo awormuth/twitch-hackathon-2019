@@ -1,3 +1,28 @@
+var questions = [
+	{
+		"question": "what is your name?",
+		"answers": [
+			"test", "test1", "test2", "test3"
+		],
+		"correctAnswer":"test1"
+	},
+	{
+		"question": "what is your name 22222?",
+		"answers": [
+			"test", "test1", "test2", "test3"
+		],
+		"correctAnswer":"test1"
+	},
+	{
+		"question": "what is your name 33333?",
+		"answers": [
+			"test", "test1", "test2", "test3"
+		],
+		"correctAnswer":"test1"
+	}
+];
+
+
 var ads = [
 	"12.gif",
 	"1.gif",
@@ -13,15 +38,36 @@ var ads = [
 	"11.gif"
 ];
 
+var currQuestion;
+
 function getRandomAd() {
     let keys = Array.from(ads.keys());
     return keys[Math.floor(Math.random() * keys.length)];
+}
+
+function getRandomQuestion() {
+    let keys = Array.from(questions.keys());
+    return keys[Math.floor(Math.random() * keys.length)];
+}
+
+function updateNewQuestion(){
+	currQuestion = questions[getRandomQuestion()];
+	
+	$("#questionBox").html("");
+
+	$("#questionBox").append("<div id='question'>" + currQuestion.question + "</div>");
+	for (var i = 0; i < currQuestion.answers.length; i++){
+		$("#questionBox").append("<div class='answer'>" + currQuestion.answers[i] + "</div>");
+	}
 }
 
 $(document).on("click", ".answer", function(){
 	console.log($(this).html());
 
 	$("#adBox").attr("src", "ads/" + ads[getRandomAd()]);
+
+	updateNewQuestion();
+
 	$("#questionBox").css("display", "none");
 	$("#adBox").css("display", "block");
 
@@ -30,6 +76,8 @@ $(document).on("click", ".answer", function(){
 		$("#questionBox").css("display", "block");
 	}, 5000);
 });
+
+updateNewQuestion();
 
 // (adsbygoogle = window.adsbygoogle || []).push({});
 
