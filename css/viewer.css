@@ -11,6 +11,33 @@ body{
     text-align:center;
 }
 
-.ad {
+#adBox {
     width:100%;
+    display:none;
+}
+
+#questionBox{
+    width: 90%;
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    padding:10px;
+}
+
+.question{
+
+}
+
+.answer{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius:5px;
+}
+
+.answer:hover{
+    cursor:pointer;
 }

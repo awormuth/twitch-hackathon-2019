@@ -1,3 +1,36 @@
+var ads = [
+	"12.gif",
+	"1.gif",
+	"2.png",
+	"3.png",
+	"4.jpg",
+	"5.jpg",
+	"6.jpg",
+	"7.jpg",
+	"8.jpg",
+	"9.jpg",
+	"10.jpg",
+	"11.gif"
+];
+
+function getRandomAd() {
+    let keys = Array.from(ads.keys());
+    return keys[Math.floor(Math.random() * keys.length)];
+}
+
+$(document).on("click", ".answer", function(){
+	console.log($(this).html());
+
+	$("#adBox").attr("src", "ads/" + getRandomAd());
+	$("#questionBox").css("display", "none");
+	$("#adBox").css("display", "block");
+
+	setTimeout(function(){
+		$("#adBox").css("display", "none");
+		$("#questionBox").css("display", "block");
+	}, 5000);
+});
+
 // (adsbygoogle = window.adsbygoogle || []).push({});
 
 // // if(window.Twitch.ext) {
