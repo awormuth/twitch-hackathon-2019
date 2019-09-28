@@ -21,7 +21,7 @@ function getRandomAd() {
 $(document).on("click", ".answer", function(){
 	console.log($(this).html());
 
-	$("#adBox").attr("src", "ads/" + getRandomAd());
+	$("#adBox").attr("src", "ads/" + ads[getRandomAd()]);
 	$("#questionBox").css("display", "none");
 	$("#adBox").css("display", "block");
 
