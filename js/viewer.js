@@ -1,20 +1,20 @@
 var questions = [
 	{
-		"question": "Where is the headquarters of Twitch",
+		"question": "Where is the headquarters of Twitch?",
 		"answers": [
-			"SF", "LA", "NYC", "SD"
+			"San Fransisco", "Los Angeles", "New York City", "San Diego"
 		],
-		"correctAnswer":"SF"
+		"correctAnswer":"San Fransisco"
 	},
 	{
-		"question": "Where is Twitchcon 2019",
+		"question": "Where is Twitchcon 2019?",
 		"answers": [
-			"LA", "SF", "SD", "NYC"
+			"Los Angeles", "San Fransisco", "San Diego", "New York City"
 		],
-		"correctAnswer":"SD"
+		"correctAnswer":"San Diego"
 	},
 	{
-		"question": "What is the parent company of Twitch",
+		"question": "What is the parent company of Twitch?",
 		"answers": [
 			"Microsoft", "Amazon", "Youtube", "Intel"
 		],
