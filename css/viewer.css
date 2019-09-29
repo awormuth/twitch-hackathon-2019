@@ -6,11 +6,10 @@ body{
 
 #topNav {
     background-color: #8A2BE2;
-    color:black;
-    font-family: Georgia;
+    color:white;
+    font-family: Lato;
     font-size: 1.7rem;
     font-weight: 200;
-
     padding:17px;
     text-align:center;
 }
@@ -22,29 +21,32 @@ body{
 
 #questionBox{
     width: 85%;
-    background-color: white;
+    background-color: black;
     border-radius: 5px;
     margin: auto;
     text-align: center;
     padding:10px;
-    font-family: "Lato";
     font-style: 
 }
 
-.question{
-    color: rgba(0,200,100, 0.8);
+#question{
+    font-family: "Lato";
+    color: white;
     font-weight: 100;
     line-height: 2;
     padding-bottom: : 15px;
+    font-size: 1.5rem;
 }
 
 .answer{
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius:5px;
+    font-size: 1.1rem;
+    color: white;
 }
 
 .answer:hover{
