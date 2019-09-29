@@ -95,6 +95,8 @@ var mathQuestions = [
 	}
 ];
 
+var adCounter = 0;
+
 
 var ads = [
 	"12.gif",
@@ -134,20 +136,42 @@ function updateNewQuestion(){
 	}
 }
 
+function showAnswer(){
+	for (var i = 0; i < $(".answer").length; i++){
+		if (currQuestion.correctAnswer == $(".answer")[i].innerHTML){
+			$($(".answer")[i]).css("background-color", "#65f365");
+			break;
+		}
+	}
+}
+
 $(document).on("click", ".answer", function(){
-	console.log($(this).html());
-
-	$("#adBox").attr("src", "ads/" + ads[getRandomAd()]);
-
-	updateNewQuestion();
-
-	$("#questionBox").css("display", "none");
-	$("#adBox").css("display", "block");
+	console.log(currQuestion)
+	if ($(this).html() == currQuestion.correctAnswer){
+		$(this).css("background-color", "#65f365");
+		$("#score").html((parseInt($("#score").html()) + 1));
+	} else {
+		$(this).css("background-color", "#bd1f1f");
+		showAnswer();
+	}
 
 	setTimeout(function(){
-		$("#adBox").css("display", "none");
-		$("#questionBox").css("display", "block");
-	}, 5000);
+		$("#adBox").attr("src", "ads/" + ads[getRandomAd()]);
+
+		updateNewQuestion();
+
+		if (adCounter % 3 == 0){
+			$("#questionBox").css("display", "none");
+			$("#adBox").css("display", "block");
+
+			setTimeout(function(){
+				$("#adBox").css("display", "none");
+				$("#questionBox").css("display", "block");
+			}, 1500);
+		}
+	}, 2000);
+
+	adCounter++;
 });
 
 updateNewQuestion();
