@@ -1,4 +1,4 @@
-var questions = [
+var superMarioBrosQuestions = [
 	{
 		"question": "What is Mario and Luigi's last name?",
 		"answers": [
@@ -47,6 +47,51 @@ var questions = [
 			"Peach", "Williams", "Forest", "Toadstool"
 		],
 		"correctAnswer":"Toadstool"
+	},
+	{
+		"question": "Super Mario Bros. 3 was first released on which platform?",
+		"answers": [
+			"NES", "SNES", "Nintendo 64", "GameCube"
+		],
+		"correctAnswer":"NES"
+	},
+	{
+		"question": "Which character returns you back to the track in Mario Kart?",
+		"answers": [
+			"Kamek", "Yoshi", "Lakitu", "Toadette"
+		],
+		"correctAnswer":"Lakitu"
+	},
+	{
+		"question": "In Super Mario Odyssey, what is the hat's name?",
+		"answers": [
+			"Hatty", "Beanie", "Harry", "Cappy"
+		],
+		"correctAnswer":"Cappy"
+	}
+];
+
+var mathQuestions = [
+	{
+		"question": "How many sides does a Nonagon have?",
+		"answers": [
+			"8", "9", "10", "11"
+		],
+		"correctAnswer":"9"
+	},
+	{
+		"question": "What is the sum of all angles of a triangle?",
+		"answers": [
+			"100", "180", "250", "360"
+		],
+		"correctAnswer":"180"
+	},
+	{
+		"question": "5 - (3 x 4) + 20 = ?",
+		"answers": [
+			"27", "-27", "18", "13"
+		],
+		"correctAnswer":"13"
 	}
 ];
 
@@ -74,12 +119,12 @@ function getRandomAd() {
 }
 
 function getRandomQuestion() {
-    let keys = Array.from(questions.keys());
+    let keys = Array.from(superMarioBrosQuestions.keys());
     return keys[Math.floor(Math.random() * keys.length)];
 }
 
 function updateNewQuestion(){
-	currQuestion = questions[getRandomQuestion()];
+	currQuestion = superMarioBrosQuestions[getRandomQuestion()];
 
 	$("#questionBox").html("");
 
