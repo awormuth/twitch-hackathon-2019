@@ -6,8 +6,12 @@ body{
 
 #topNav {
     background-color: #8A2BE2;
-    color:white;
-    padding:10px;
+    color:black;
+    font-family: Georgia;
+    font-size: 1.7rem;
+    font-weight: 200;
+
+    padding:17px;
     text-align:center;
 }
 
@@ -17,22 +21,27 @@ body{
 }
 
 #questionBox{
-    width: 90%;
+    width: 85%;
     background-color: white;
     border-radius: 5px;
     margin: auto;
     text-align: center;
     padding:10px;
+    font-family: "Lato";
+    font-style: 
 }
 
 .question{
-
+    color: rgba(0,200,100, 0.8);
+    font-weight: 100;
+    line-height: 2;
+    padding-bottom: : 15px;
 }
 
 .answer{
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius:5px;
