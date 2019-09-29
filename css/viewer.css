@@ -1,18 +1,16 @@
 body{
-    background-color: #8A2BE2;
+    background: url(https://cdn.discordapp.com/attachments/627570004727955472/627905920730529823/trivia_for_charity_background.png);
     margin:0;
     padding:0;
 }
 
-#topNav {
-    background-color: #8A2BE2;
-    color:white;
-    font-family: Lato;
-    font-size: 1.7rem;
-    font-weight: 200;
-    padding:17px;
-    text-align:center;
+
+
+#topNavLabel{
+    font-size: 2.0rem;
 }
+
+
 
 #adBox {
     width:100%;
@@ -21,32 +19,36 @@ body{
 
 #questionBox{
     width: 85%;
-    background-color: black;
+    background-color: rgba(157, 156, 157,0.55);
     border-radius: 5px;
     margin: auto;
     text-align: center;
     padding:10px;
-    font-style: 
 }
 
 #question{
-    font-family: "Lato";
-    color: white;
+
+    color: rgb(255, 195, 0);
     font-weight: 100;
     line-height: 2;
     padding-bottom: : 15px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+      text-shadow: 2px 2px black;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .answer{
-    padding-top: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 7px;
     padding-bottom: 5px;
-    border: 2px solid white;
+    border: 5px solid rgba(154, 157, 157,.80);
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius:5px;
-    font-size: 1.1rem;
-    color: white;
+    font-size: 1.8rem;
+    background-color: rgba(255,255,255,0.80);
+    color: black;
+          text-shadow: 1px 1px blue;
 }
 
 .answer:hover{
