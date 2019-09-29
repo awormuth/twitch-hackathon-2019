@@ -1,24 +1,24 @@
 var questions = [
 	{
-		"question": "what is your name?",
+		"question": "Where is the headquarters of Twitch",
 		"answers": [
-			"test", "test1", "test2", "test3"
+			"SF", "LA", "NYC", "SD"
 		],
-		"correctAnswer":"test1"
+		"correctAnswer":"SF"
 	},
 	{
-		"question": "what is your name 22222?",
+		"question": "Where is Twitchcon 2019",
 		"answers": [
-			"test", "test1", "test2", "test3"
+			"LA", "SF", "SD", "NYC"
 		],
-		"correctAnswer":"test1"
+		"correctAnswer":"SD"
 	},
 	{
-		"question": "what is your name 33333?",
+		"question": "What is the parent company of Twitch",
 		"answers": [
-			"test", "test1", "test2", "test3"
+			"Microsoft", "Amazon", "Youtube", "Intel"
 		],
-		"correctAnswer":"test1"
+		"correctAnswer":"Amazon"
 	}
 ];
 
@@ -52,7 +52,7 @@ function getRandomQuestion() {
 
 function updateNewQuestion(){
 	currQuestion = questions[getRandomQuestion()];
-	
+
 	$("#questionBox").html("");
 
 	$("#questionBox").append("<div id='question'>" + currQuestion.question + "</div>");
@@ -74,7 +74,7 @@ $(document).on("click", ".answer", function(){
 	setTimeout(function(){
 		$("#adBox").css("display", "none");
 		$("#questionBox").css("display", "block");
-	}, 5000);
+	}, );
 });
 
 updateNewQuestion();
@@ -92,7 +92,7 @@ updateNewQuestion();
 //   ga('send', 'event', 'Load', 'IGExtensionLoaded');
 //   function loadPanel() {
 //     // var xmlHttp2 = new XMLHttpRequest();
-//     // xmlHttp2.onreadystatechange = function() { 
+//     // xmlHttp2.onreadystatechange = function() {
 //     //   if (xmlHttp2.readyState == 4 && xmlHttp2.status == 200){
 //         // var username = JSON.parse(xmlHttp2.responseText).username;
 //         var username = "twitch"
@@ -107,7 +107,7 @@ updateNewQuestion();
 //         }
 
 //         var xmlHttp = new XMLHttpRequest();
-//         xmlHttp.onreadystatechange = function() { 
+//         xmlHttp.onreadystatechange = function() {
 
 //           if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
 //             var user = JSON.parse(xmlHttp.responseText).graphql.user;
@@ -127,7 +127,7 @@ updateNewQuestion();
 //             }
 
 //             document.getElementById("pictures").innerHTML = tmpHTML;
-//           } 
+//           }
 //           // else if (xmlHttp2.status == 500) {
 //           //   console.log("Error")
 //           //   // var myEle = document.getElementById("pixelsErrorMessage");
@@ -136,7 +136,7 @@ updateNewQuestion();
 //           //   // }
 //           // }
 //         }
-//         xmlHttp.open("GET", "https://www.instagram.com/" + username + "/?__a=1", true); 
+//         xmlHttp.open("GET", "https://www.instagram.com/" + username + "/?__a=1", true);
 //         xmlHttp.send();
 //       // } else if (xmlHttp2.status == 500) {
 //       //   var myEle = document.getElementById("pixelsErrorMessage");
@@ -156,10 +156,10 @@ updateNewQuestion();
 // //   });
 
 // //   window.Twitch.ext.onContext(function(context, contextFields) {
-    
+
 // //   });
-  
+
 // //   window.Twitch.ext.onError(function(err) {
-    
+
 // //   });
 // // }
