@@ -1,24 +1,52 @@
 var questions = [
 	{
-		"question": "Where is the headquarters of Twitch",
+		"question": "What is Mario and Luigi's last name?",
 		"answers": [
-			"SF", "LA", "NYC", "SD"
+			"The Plumber", "Mario", "Brothers", "Goomba"
 		],
-		"correctAnswer":"SF"
+		"correctAnswer":"Mario"
 	},
 	{
-		"question": "Where is Twitchcon 2019",
+		"question": "Where does Princess Peach live?",
 		"answers": [
-			"LA", "SF", "SD", "NYC"
+			"Mushroom Kingdom", "Yoshi's Island", "Lost Kingdom", "Seaside Kingdom"
 		],
-		"correctAnswer":"SD"
+		"correctAnswer":"Mushroom Kingdom"
 	},
 	{
-		"question": "What is the parent company of Twitch",
+		"question": "What year did Mario debut as 'Jumpman'?",
 		"answers": [
-			"Microsoft", "Amazon", "Youtube", "Intel"
+			"1969", "1973", "1981", "1997"
 		],
-		"correctAnswer":"Amazon"
+		"correctAnswer":"1981"
+	},
+	{
+		"question": "Which have not worked with Bowser?",
+		"answers": [
+			"Bowser Jr.", "Toad", "Koopa Troopa", "Goomba"
+		],
+		"correctAnswer":"Toad"
+	},
+	{
+		"question": "How old is Mario? (physical age; not video game)",
+		"answers": [
+			"18", "24", "32", "48"
+		],
+		"correctAnswer":"24"
+	},
+	{
+		"question": "Yoshi is most like a _____:",
+		"answers": [
+			"Dinosaur", "Turtle", "Lizard", "Chameleon"
+		],
+		"correctAnswer":"Dinosaur"
+	},
+	{
+		"question": "What is Princess Peach's last name?",
+		"answers": [
+			"Peach", "Williams", "Forest", "Toadstool"
+		],
+		"correctAnswer":"Toadstool"
 	}
 ];
 
@@ -74,7 +102,7 @@ $(document).on("click", ".answer", function(){
 	setTimeout(function(){
 		$("#adBox").css("display", "none");
 		$("#questionBox").css("display", "block");
-	}, );
+	}, 5000);
 });
 
 updateNewQuestion();
